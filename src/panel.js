@@ -7,12 +7,45 @@ const ButtonText = styled.div`
   border: 1px solid rgba(1, 1, 1, 0);
 `;
 
-const Container = styled.div`
-  box-shadow: 2px 2px 5px black;
+const StyledPanel = styled.div`
+  box-shadow: 5px 5px black;
   background: rgb(192, 192, 192);
 
+  .top {
+    height: 3.5rem;
+    width: 400px;
+    border-bottom: 0;
+    display: flex;
+    align-content: center;
+
+    .top-span {
+      margin: 5px;
+      margin-bottom: 0;
+      padding: 0 15px;
+      background: linear-gradient(90deg, darkblue, darkblue, darkblue, royalblue);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: white;
+      font-family: 'Trebuchet MS', monospace;
+      font-weight: bold;
+    }
+  }
+
+  .content-border {
+    height: 300px;
+    width: 400px;
+    border: 5px solid rgb(192, 192, 192);
+    box-sizing: border-box;
+  }
+
   button {
-    border: 2px outset white;
+    border: 2px outset rgb(151, 151, 151);
     border-radius: 0;
     margin: 5px 0;
     background: rgb(212, 212, 212);
@@ -26,76 +59,32 @@ const Container = styled.div`
       border: 1px dotted gray;
     }
   }
-`;
 
-const OuterBorder = styled.div`
-  border: 1px solid rgba(52, 52, 52);
-  border-top: 0;
-`;
+  .content {
+    border: 2px inset rgb(171, 171, 171);
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: 'Trebuchet MS', monospace;
+    font-size: 20px;
+    background: rgb(200, 200, 200);
 
-const InsetBorder = styled.div`
-  height: 300px;
-  width: 450px;
-  border: 5px solid rgb(192, 192, 192);
-  box-sizing: border-box;
-`;
-
-const Content = styled.div`
-  border: 1px solid rgb(52, 52, 52);
-  border: 1px inset rgb(171, 171, 171);
-  height: 100%;
-  box-sizing: border-box;
-  padding: 25px;
-  font-family: monospace;
-  font-size: 20px;
-  background: rgb(200, 200, 200);
-`;
-
-const Top = styled.div`
-  height: 3.5rem;
-  width: 450px;
-  border: 1px solid black;
-  border-bottom: 0;
-  display: flex;
-  align-content: center;
-
-  .span {
-    margin: 5px;
-    margin-bottom: 0;
-    padding: 0 15px;
-    background: linear-gradient(90deg, #050a30, #000c66);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  p {
-    font-size: 1.5rem;
-    color: white;
-    font-family: monospace;
-    font-weight: 500;
+    h1 {
+      font-weight: normal;
+    }
   }
 `;
 
 export const Panel = () => (
-  <Container>
-    <Top>
-      <div className='span'>
-        <p>doily.dev</p>
-        <button>x</button>
+  <StyledPanel>
+    <div className='top'>
+      <div className='top-span'>
+        <p>links</p>
+        <button>X</button>
       </div>
-    </Top>
-    <OuterBorder>
-      <InsetBorder>
-        <Content>
-          Panel
-          <br />
-          <button>
-            <ButtonText>button</ButtonText>
-          </button>
-        </Content>
-      </InsetBorder>
-    </OuterBorder>
-  </Container>
+    </div>
+    <div className='content-border'>
+      <div className='content'>Lorem ipsum</div>
+    </div>
+  </StyledPanel>
 );
