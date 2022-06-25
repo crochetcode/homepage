@@ -1,2 +1,1 @@
-### add readme here...
-A customized create-react-app template.
+### homepage with links

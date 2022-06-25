@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Panel} from '../panel';
 
 const StyledDiv = styled.div`
   height: 100vh;
@@ -18,7 +19,7 @@ const StyledDiv = styled.div`
 export const Main = () => {
   return (
     <StyledDiv>
-      <h1>React app template</h1>
+      <Panel />
     </StyledDiv>
   );
 };
