@@ -1,12 +1,12 @@
 body {
     margin: 0;
-    background: rgb(31, 31, 31);
-    color: rgb(191, 191, 191);
+    background: #018281;
 }
 
 h1, h2, h3, h4, h5, h6, p {
     font-size: 1rem;
     margin: 0;
+    font-weight: normal;
 }
 
 a {
