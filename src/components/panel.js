@@ -68,7 +68,9 @@ const StyledPanel = styled.div`
     padding: 20px;
     font-family: 'Trebuchet MS', monospace;
     font-size: 20px;
-    background: rgb(200, 200, 200);
+    background: rgba(210, 210, 210, 0.75);
+    display: flex;
+    flex-wrap: wrap;
 
     h1 {
       font-weight: normal;
@@ -86,6 +88,13 @@ export const Panel = () => (
     </div>
     <div className='content-border'>
       <div className='content'>
+        <Icons />
+        <Icons />
+        <Icons />
+        <Icons />
+        <Icons />
+        <Icons />
+        <Icons />
         <Icons />
       </div>
     </div>
