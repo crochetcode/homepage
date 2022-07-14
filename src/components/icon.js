@@ -12,9 +12,8 @@ const StyledIconContainer = styled.div`
     width: 60px;
     height: 75px;
     border: 3px dotted rgba(1, 1, 1, 0);
-    padding: 5px;
-    margin: 0 10px;
-    margin-top: ${() => chance.integer({min: 0, max: 15})}px;
+    padding: 10px;
+    margin: ${() => chance.integer({min: 0, max: 15})}px 5px 0 5px;
 
     &:hover {
       cursor: pointer;
@@ -35,7 +34,7 @@ const StyledIconContainer = styled.div`
 `;
 
 // eslint-disable-next-line react/prop-types
-export const Icons = ({display, image, link}) => {
+export const Icon = ({display, image, link}) => {
   return (
     <StyledIconContainer>
       <a href={link} target='_blank' rel='noreferrer'>

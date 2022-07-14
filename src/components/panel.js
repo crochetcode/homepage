@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Icons} from './icon';
+import {Icon} from './icon';
 import {links} from '../constants/links';
 
 const ButtonText = styled.div`
@@ -87,7 +87,7 @@ export const Panel = () => (
     <div className='content-border'>
       <div className='content'>
         {links.map((link) => (
-          <Icons key={link.display} {...link} />
+          <Icon key={link.display} {...link} />
         ))}
       </div>
     </div>
