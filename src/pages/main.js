@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import {Panel} from '../components/panel';
+import {StartBar} from '../components/start-bar';
 
 const StyledDiv = styled.div`
-  height: 100vh;
+  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,8 +19,11 @@ const StyledDiv = styled.div`
 
 export const Main = () => {
   return (
-    <StyledDiv>
-      <Panel />
-    </StyledDiv>
+    <>
+      <StyledDiv>
+        <Panel />
+      </StyledDiv>
+      <StartBar />
+    </>
   );
 };
