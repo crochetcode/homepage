@@ -23,7 +23,7 @@ const StyledPanel = styled.div`
       margin: 5px;
       margin-bottom: 0;
       padding: 0 15px;
-      background: linear-gradient(90deg, darkblue, darkblue, darkblue, royalblue);
+      background: linear-gradient(90deg, darkblue 70%, royalblue 95%);
       width: 100%;
       display: flex;
       align-items: center;

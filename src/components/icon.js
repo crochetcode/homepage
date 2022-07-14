@@ -19,6 +19,10 @@ const StyledIconContainer = styled.div`
       cursor: pointer;
       border: 3px dotted gray;
     }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
   }
 
   img {
