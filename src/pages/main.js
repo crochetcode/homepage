@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Panel} from '../panel';
+import {Panel} from '../components/panel';
 
 const StyledDiv = styled.div`
   height: 100vh;

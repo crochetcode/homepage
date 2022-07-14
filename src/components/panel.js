@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Icons} from './icon';
 
 const ButtonText = styled.div`
   margin: 2px;
@@ -84,7 +85,9 @@ export const Panel = () => (
       </div>
     </div>
     <div className='content-border'>
-      <div className='content'>Lorem ipsum</div>
+      <div className='content'>
+        <Icons />
+      </div>
     </div>
   </StyledPanel>
 );
