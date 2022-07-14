@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import github from '../assets/github.png';
+import Chance from 'chance';
+
+const chance = new Chance();
 
 const StyledIconContainer = styled.div`
   a {
@@ -7,11 +9,12 @@ const StyledIconContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 55px;
+    width: 60px;
     height: 75px;
     border: 3px dotted rgba(1, 1, 1, 0);
     padding: 5px;
-    margin: 0 2.5px;
+    margin: 0 10px;
+    margin-top: ${() => chance.integer({min: 0, max: 15})}px;
 
     &:hover {
       cursor: pointer;
@@ -21,6 +24,8 @@ const StyledIconContainer = styled.div`
 
   img {
     height: 65px;
+    object-fit: contain;
+    padding: 5px;
   }
 
   p {
@@ -29,12 +34,13 @@ const StyledIconContainer = styled.div`
   }
 `;
 
-export const Icons = () => {
+// eslint-disable-next-line react/prop-types
+export const Icons = ({display, image, link}) => {
   return (
     <StyledIconContainer>
-      <a href='https://github.com/crochetcode' target='_blank' rel='noreferrer'>
-        <img src={github} alt='github pixel icon' />
-        <p>github</p>
+      <a href={link} target='_blank' rel='noreferrer'>
+        <img src={image} alt='icon' />
+        <p>{display}</p>
       </a>
     </StyledIconContainer>
   );
