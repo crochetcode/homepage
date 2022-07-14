@@ -3,7 +3,7 @@ import linked from '../assets/linked.png';
 
 export const links = [
   {
-    display: 'gitHub',
+    display: 'github',
     image: github,
     link: 'https://github.com/crochetcode'
   },
