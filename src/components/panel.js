@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import {Icon} from './icon';
+import {links} from '../constants/links';
 
 const ButtonText = styled.div`
   margin: 2px;
@@ -12,8 +14,7 @@ const StyledPanel = styled.div`
   background: rgb(192, 192, 192);
 
   .top {
-    height: 3.5rem;
-    width: 400px;
+    height: 3rem;
     border-bottom: 0;
     display: flex;
     align-content: center;
@@ -30,16 +31,14 @@ const StyledPanel = styled.div`
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       color: white;
-      font-family: 'Trebuchet MS', monospace;
+      font-family: 'Courier New', monospace;
       font-weight: bold;
     }
   }
 
   .content-border {
-    height: 300px;
-    width: 400px;
     border: 5px solid rgb(192, 192, 192);
     box-sizing: border-box;
   }
@@ -67,7 +66,9 @@ const StyledPanel = styled.div`
     padding: 20px;
     font-family: 'Trebuchet MS', monospace;
     font-size: 20px;
-    background: rgb(200, 200, 200);
+    background: rgba(210, 210, 210, 0.75);
+    display: flex;
+    flex-wrap: wrap;
 
     h1 {
       font-weight: normal;
@@ -80,11 +81,15 @@ export const Panel = () => (
     <div className='top'>
       <div className='top-span'>
         <p>links</p>
-        <button>X</button>
+        {/*<button>X</button>*/}
       </div>
     </div>
     <div className='content-border'>
-      <div className='content'>Lorem ipsum</div>
+      <div className='content'>
+        {links.map((link) => (
+          <Icon key={link.display} {...link} />
+        ))}
+      </div>
     </div>
   </StyledPanel>
 );
