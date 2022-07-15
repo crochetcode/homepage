@@ -76,12 +76,13 @@ const StyledPanel = styled.div`
   }
 `;
 
-export const Panel = () => (
+export const Panel = (props) => (
   <StyledPanel>
     <div className='top'>
       <div className='top-span'>
         <p>links</p>
-        {/*<button>X</button>*/}
+        {/* eslint-disable-next-line react/prop-types */}
+        <button onClick={() => props.showLinkFolder(false)}>X</button>
       </div>
     </div>
     <div className='content-border'>
