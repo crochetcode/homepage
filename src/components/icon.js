@@ -13,11 +13,10 @@ const StyledIconContainer = styled.div`
     height: 75px;
     border: 3px dotted rgba(1, 1, 1, 0);
     padding: 10px;
-    margin: ${() => chance.integer({min: 0, max: 15})}px 5px 0 5px;
+    margin: ${(props) => (props.link ? chance.integer({min: 0, max: 15}) : 0)}px 5px 0 5px;
 
     &:hover {
       cursor: pointer;
-      border: 3px dotted gray;
     }
 
     &:hover img {
@@ -40,7 +39,7 @@ const StyledIconContainer = styled.div`
 // eslint-disable-next-line react/prop-types
 export const Icon = ({display, image, link}) => {
   return (
-    <StyledIconContainer>
+    <StyledIconContainer link={link}>
       <a href={link} target='_blank' rel='noreferrer'>
         <img src={image} alt='icon' />
         <p>{display}</p>
