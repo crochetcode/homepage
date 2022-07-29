@@ -1,0 +1,22 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  flex: 1;
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 150px;
+  box-sizing: border-box;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
+.folders {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

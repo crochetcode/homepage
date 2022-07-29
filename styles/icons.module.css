@@ -1,0 +1,27 @@
+.link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px dotted rgba(1, 1, 1, 0);
+    margin: 5px 15px;
+}
+
+.link:hover {
+     cursor: pointer;
+ }
+
+.link:hover .img {
+     transform: scale(1.1);
+ }
+
+.img {
+    object-fit: contain;
+}
+
+.label {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.25rem;
+}
