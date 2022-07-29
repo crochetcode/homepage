@@ -15,8 +15,8 @@ export const Footer = () => {
                 />
                 <p className={styles.text}>doily.dev</p>
             </div>
-            <div className={styles.time} suppressHydrationWarning>
-                <p>{new Date().toDateString()}</p>
+            <div className={styles.time}>
+                {/*<p>{new Date().toDateString()}</p>*/}
             </div>
         </footer>
     );
