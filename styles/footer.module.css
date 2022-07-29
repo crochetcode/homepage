@@ -1,0 +1,54 @@
+.footer {
+    height: 50px;
+    width: calc(100vw - 0px);
+    margin: 0 auto;
+    background: rgb(212, 212, 212);
+    border: 2px outset rgb(51, 51, 51);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+}
+
+.start,
+.time {
+    border: 3px outset rgb(151, 151, 151);
+    width: 185px;
+    height: 45px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1px;
+}
+
+.text {
+    font-size: 1.25rem;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.start:hover .img {
+    transform: scale(-1, -1);
+}
+
+.start:hover {
+    cursor: default;
+}
+
+.start:hover p {
+    font-size: 1.3rem;
+}
+
+.time {
+    border: 2px inset rgb(151, 151, 151);
+    height: 40px;
+    margin: 0 5px;
+}
+
+.time p {
+    font-size: 1.15rem;
+    font-family: "Times New Roman", serif;
+}
